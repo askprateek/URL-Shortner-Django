@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row">
+  <div class="s12 m6 center">
+    <div class="row">
+      <div class="col s12">
+        <h2>localhost:8000/{{ shortened_link }} will redirect to </h2>
+        <h4>{{ given_url }} </h4>
+      </div>
+    </div>
+    <form class="col s12 m6 offset-m6" method="POST" action>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id ="url " name="url" type="text" class="validate">
+          <label for="url">Enter URL to shorten</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="custom" name= "custom" type="text" class="validate">
+          <label for="custom">Type Custom URL (Optional)</label>
+        </div>
+      </div>
+      <div class="col s12">
+        <button class="btn">Short it</button>
+      </div>
+    </form>
+  </div>
+
+
+
+
+{% endblock %}
