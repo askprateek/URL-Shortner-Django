@@ -1,5 +1,5 @@
 from django.shortcuts import render,render_to_response
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from django.views.decorators.csrf import csrf_protect
 from random import choice
 from models import Urldb
@@ -24,4 +24,4 @@ def index(request):
 def redirect(request, server_hit_url):
     find_url = Urldb.objects.get(shortened_link = server_hit_url)
 
-    return HttpResponse(find_url)
+    return HttpResponseRedirect(find_url.weburl)
