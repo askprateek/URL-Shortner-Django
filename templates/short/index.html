@@ -3,25 +3,39 @@
 {% block content %}
 <div class="row">
   <div class="s12 center">
-    <div class="row valign-wrapper">
-      <div class="col s12 m6 valign">
+    <div class="row">
+      <div class="col s12 {% if form %}m6{% endif %}">
         {% if shortened_link %}
-          <h2>localhost:8000/{{ shortened_link }} will redirect to </h2>
+        <div class="row col s12">
+          <h4>localhost:8000/{{ shortened_link }} <br>will redirect to </h4>
           <h4>{{ given_url }} </h4>
+        </div>
+        <div class="row col s12">
+          <a class= "link" href ="/">Create another short URL</a>
+        </div>
         {% else %}
           <h5 center>Hello User,<br> This website will allow you to<br> create short links of long Web URLS </h5>
         {% endif %}
       </div>
+      {% if form %}
       <div class="col s12 m6">
       <form method="POST" action>
         <div class="row">
           <div class="input-field col s12">
             <h4>Enter URL to shorten</h4>
-            <input id ="url " name="url" type="text" class="validate">
+            {{form.weburl}}
+
+            {% if form_error.weburl %}
+              {{form_error.weburl}}
+            {% endif %}
           </div>
           <div class="input-field col s12">
             <h4>Type Custom URL (Optional)</h4>
-            <input id="custom" name= "custom" type="text" class="validate">
+            {{form.shortened_link}}
+
+            {% if form_error.shortened_link %}
+              {{form_error.shortened_link}}
+            {% endif %}
           </div>
         </div>
         <div class="col s12">
@@ -29,6 +43,8 @@
         </div>
       </form>
     </div>
+    {% endif %}
+
     </div>
   </div>
 </div>

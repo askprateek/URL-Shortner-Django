@@ -1,7 +1,8 @@
 body {
-    background: #B1DCFB;
-    color:#fff;
-    text-shadow: 0px 0px 1px #0089ec;
+    background: #FDEF6C;
+    color:#000;
+    text-shadow: 0px 0px 1px #fff;
+    font-family: 'Cairo', sans-serif;
   }
 
 
@@ -9,19 +10,32 @@ body {
   text-shadow: 1px 1px 1px #000;
 }
 nav{
-  font-family: 'Lobster', cursive;
+  font-family: 'Jockey One', sans-serif;
   padding: 20px;
   min-height: 100px;
   margin-bottom: 100px;
-  background: #B1DCFB;
+  background: #9C27B0;
   box-shadow: 0 0 0;
 }
 nav li a{
   font-size: 20px;
 }
+
+.link{
+  border : 1px solid #444;
+  font-size: 20px;
+  border-radius: 3px;
+  padding: 10px;
+  color: black;
+
+}
+.link:hover{
+  color:white;
+  background: black;
+}
+
 label{
   font-size: 24px;
-  font-family:  'Lobster', cursive;
   color: #FFAB40;
 }
 input[type='text'],input[type='password']{
@@ -38,15 +52,16 @@ input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly
 
 .button{
   background: rgba(0,0,0,0);
-
   border: 2px solid #444;
+  color:#000;
 }
 .wide{
   min-width: 100%;
   margin-top: 20px;
 }
-.button:focus{
-  background: #FFAB40;
+.button:focus,.button:hover{
+  background: #000;
+  color:#fff;
 }
 
 footer.page-footer{
