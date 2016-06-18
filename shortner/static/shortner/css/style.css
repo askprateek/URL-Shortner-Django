@@ -1,6 +1,7 @@
 body {
-    background: #2a2a2a;
+    background: #B1DCFB;
     color:#fff;
+    text-shadow: 0px 0px 1px #0089ec;
   }
 
 
@@ -12,7 +13,7 @@ nav{
   padding: 20px;
   min-height: 100px;
   margin-bottom: 100px;
-  background: #FFAB40;
+  background: #B1DCFB;
   box-shadow: 0 0 0;
 }
 nav li a{
@@ -24,21 +25,21 @@ label{
   color: #FFAB40;
 }
 input[type='text'],input[type='password']{
-  border: 2px solid #BABABA;
+  border: 2px solid #444;
   border-radius: 3px;
   padding-left: 5px;
 
 }
 
 input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly]), input[type=email]:focus:not([readonly]){
-  border-bottom: 2px solid #BABABA;
+  border-bottom: 2px solid #444;
   box-shadow: 0px 0px 3px 0px #FAFAFA;
 }
 
 .button{
-  background: rgba(0,0,0,0.3);
-  padding: 11px 15px 11px 15px;
-  border: 2px solid #BABABA;
+  background: rgba(0,0,0,0);
+
+  border: 2px solid #444;
 }
 .wide{
   min-width: 100%;
