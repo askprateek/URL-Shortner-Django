@@ -25,7 +25,7 @@ SECRET_KEY = 'ga$8o=ez9%be1n&8(u%88*rglvo1u9evc+$5mdcj9ob-p5-#ql'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['askprateek.herokuapp.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
