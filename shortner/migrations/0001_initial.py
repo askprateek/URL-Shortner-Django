@@ -14,7 +14,7 @@ class Migration(migrations.Migration):
             name='Urldb',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('weburl', models.TextField()),
+                ('weburl', models.URLField()),
                 ('shortened_link', models.CharField(max_length=10)),
             ],
         ),
